@@ -1,0 +1,272 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #2e323b;
+  line-height: 1.6;
+  font-family: Muli, sans-serif;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../webfonts/fa-solid-900.ttf) format("truetype");
+}
+
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fa-chevron-left:before {
+  content: "\f053";
+}
+
+.fa-chevron-right:before {
+  content: "\f054";
+}
+
+.fa-chevron-up:before {
+  content: "\f077";
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* Common Elements
+/* ------------------------------------------------------------------------------------*/
+#back-to-top,
+.btn,
+:after,
+:before,
+a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.8rem;
+  min-width: 160px;
+  padding: 10px 30px;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  width: auto;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* Subpages
+/* ------------------------------------------------------------------------------------*/
+p {
+  color: #2e323b;
+  font-weight: 400;
+}
+
+ul li {
+  font-size: 18px;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  color: #2e323b;
+}
+
+.job-listings-section {
+  margin: 60px auto;
+}
+
+.job-listings {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.job-listings[aria-show="false"] {
+  display: none;
+}
+
+.job-listings .job-title {
+  color: #eb8a2d;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.job-listings li {
+  padding: 1rem 0;
+}
+
+.job-listings .job-tags {
+  list-style-type: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.job-listings .job-tags li {
+  font-size: 16px;
+  color: grey;
+  font-weight: 500;
+  padding: 0;
+  padding-right: 1rem;
+  display: flex;
+}
+
+.job-listings .job-tags li:after {
+  content: "|";
+  padding-left: 1rem;
+}
+
+.job-listings .job-tags li:last-child:after {
+  content: "";
+}
+
+.job-listings .job-description {
+  font-size: 18px;
+  line-height: 2rem;
+  height: 4rem;
+  overflow: hidden;
+  color: grey;
+  margin-bottom: 2rem;
+}
+
+.action-btn {
+  display: -webkit-box;
+  display: flex;
+}
+
+.action-btn a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.8rem 1.2rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.action-btn .blue {
+  background-color: #306798;
+  border: 1px solid #306798;
+}
+
+.action-btn .blue:hover {
+  background-color: white;
+  color: #306798;
+}
+
+.action-btn .orange {
+  background-color: #eb8a2d;
+  border: 1px solid #eb8a2d;
+}
+
+.action-btn .orange:hover {
+  background-color: white;
+  color: #eb8a2d;
+}
+
+.pagination {
+  list-style-type: none;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-left: 0;
+}
+
+.pagination .page-link.active {
+  background: #003061;
+}
+
+.search-options input[type="text"] {
+  font-size: 1.5rem;
+  height: auto;
+}
+
+.search-options .invalid-feedback {
+  color: #dc3545;
+  margin-bottom: 0;
+}
+
+.search-options .tags {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.search-options .tags li {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin: 1rem 0.5rem;
+  background: #e9ecef;
+  border-radius: 2rem;
+  color: #495057;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.search-options .tags li.active {
+  background: #ced4da;
+}
+
+.orange-banner {
+  background-color: #ef7c00;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.orange-banner p {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 1.5rem 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .orange-banner p {
+    width: 100%;
+  }
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#back-to-top {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 1000px;
+  text-align: center;
+  background: #003d7c;
+  color: #fff;
+  z-index: 5;
+}
+
+#back-to-top i {
+  color: #fff;
+}
+
+#back-to-top:hover {
+  background-color: #004a96;
+}

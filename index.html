@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Job Listing</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 order-3 mt-5">
+          <div class="orange-banner">
+            <p>
+              <b>
+                NUS is looking for people who are passionate about shaping one of Asia's top leading University's future. Take your first step towards a career that matters!
+                <br>
+                Search for Executive positions below and kickstart your career today!
+              </b>
+              <br>
+              (Please check in frequently as vacant positions will be added from time to time)
+            </p>
+          </div>
+          <div class="job-listings-section">
+            <p class="label">Search Job Openings:</p>
+            <div id="job-listings">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a id="back-to-top" class="fas fa-chevron-up"></a>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/job-listing.js" type="text/javascript"></script>
+  <script>
+  $(document).ready(function() {
+    $('#job-listings').ListJobs({
+      data: 'data/executive-jobs.xml',
+      itemsToShow: 10, // any valid number. to show all, input -1 or delete this line. default is show all
+      showMoreType: 'pagination', // 'pagination' or 'show-more'. default is show-more
+      search: true, // true or false. default is false
+      searchParameters: ['title', 'department', 'type'], // which fields to search for keywords. default is just 'title'
+      categoryFilter: true // true or false. default is false
+    });
+
+    $("#back-to-top").click(function () {
+      $("body,html").animate({ scrollTop: 0 }, 800);
+    });
+  });
+  $(window).scroll(function () {
+    $(this).scrollTop() > 50 ? $("#back-to-top").fadeIn() : $("#back-to-top").fadeOut();
+  });
+  </script>
+</body>
+</html>
